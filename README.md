@@ -27,6 +27,25 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/mmmwhy/ss-panel
 
 默认密码：91vps
 
+节点服务器运行脚本
+yum -y install wget
+wget -N --no-check-certificate https://raw.githubusercontent.com/mmmwhy/ss-panel-and-ss-py-mu/master/ss-panel-v3-mod.sh && chmod +x ss-panel-v3-mod.sh && bash ss-panel-v3-mod.sh
+输入2，之后需要输入前端站点的domain，token，node_id。
+
+doamin： 域名或者ip都可以，前边要加http或者https。不要弄错，否则可能出现无法推送使用记录的情况。
+mukey(token)：默认回车，除非你另行设置过。
+node_id：还记得上边那个图里边的ID吗？就是那个了。。。
+其他
+
+修改ssh端口
+vi /etc/ssh/sshd_config
+service sshd restart #重启生效
+管理ssr
+supervisorctl {start|stop|restart} ssr
+修改mysql密码
+wget http://soft.vpser.net/lnmp/ext/reset_mysql_root_password.sh
+sh reset_mysql_root_password.sh
+
 # 关于
 码农一只，欢迎打赏。
 本程序主要用于：
