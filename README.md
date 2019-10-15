@@ -11,13 +11,13 @@
 ### ss-panel mod魔改版一键脚本
 ```
 yum install screen wget -y &&screen -S ss 
-wget -N --no-check-certificate https://raw.githubusercontent.com/mmmwhy/ss-panel-and-ss-py-mu/master/ss-panel-v3-mod.sh && chmod +x ss-panel-v3-mod.sh && bash ss-panel-v3-mod.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/itrydo/otoone/master/ss-panel-v3-mod.sh && chmod +x ss-panel-v3-mod.sh && bash ss-panel-v3-mod.sh
 
 ```
 ### ss-panel v3一键脚本
 ```
 yum install screen wget -y &&screen -S ss
-wget -N --no-check-certificate https://raw.githubusercontent.com/mmmwhy/ss-panel-and-ss-py-mu/master/ss-panel_node.sh && chmod +x ss-panel_node.sh && bash ss-panel_node.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/itrydo/otoone/master/ss-panel_node.sh && chmod +x ss-panel_node.sh && bash ss-panel_node.sh
 
 ```
 
@@ -30,7 +30,7 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/mmmwhy/ss-panel
 节点服务器运行脚本
 
 yum -y install wget
-wget -N --no-check-certificate https://raw.githubusercontent.com/mmmwhy/ss-panel-and-ss-py-mu/master/ss-panel-v3-mod.sh && chmod +x ss-panel-v3-mod.sh && bash ss-panel-v3-mod.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/itrydo/otoone/master/ss-panel-v3-mod.sh && chmod +x ss-panel-v3-mod.sh && bash ss-panel-v3-mod.sh
 输入2，之后需要输入前端站点的domain，token，node_id。
 
 doamin： 域名或者ip都可以，前边要加http或者https。不要弄错，否则可能出现无法推送使用记录的情况。
