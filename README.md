@@ -3,7 +3,16 @@
 除去lnmp的安装时间，仅需3分钟即可完成。
 # 联系方式
 [TG讨论组](https://t.me/feiyangss)
-
+cd /www/wwwroot/你的文件夹名
+git clone -b master https://github.com/Anankke/SSPanel-Uim.git tmp && mv tmp/.git . && rm -rf tmp && git reset --hard
+git config core.filemode false
+wget https://getcomposer.org/installer -O composer.phar
+php composer.phar
+php composer.phar install
+cd ../
+chmod -R 755 你的文件夹名/
+chown -R www:www 你的文件夹名/
+ln -s /www/wwwroot/你的文件夹名/sql/glzjin_all.sql /www/backup/database/
 # 代码部分
 
 ##### 要求centos 7 x64
@@ -20,6 +29,7 @@ yum install screen wget -y &&screen -S ss
 wget -N --no-check-certificate https://raw.githubusercontent.com/itrydo/otoone/master/ss-panel_node.sh && chmod +x ss-panel_node.sh && bash ss-panel_node.sh
 
 ```
+
 
 选项都差不多,直接输入1安装即可
 
