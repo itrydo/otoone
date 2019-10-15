@@ -7,7 +7,7 @@ install_ss_panel_mod_v3(){
 	yum update -y nss curl libcurl 
 	num=$1
 	if [ "${num}" != "1" ]; then
-  	  wget -c --no-check-certificate https://raw.githubusercontent.com/mmmwhy/ss-panel-and-ss-py-mu/master/lnmp1.4.zip && unzip lnmp1.4.zip && rm -rf lnmp1.4.zip && cd lnmp1.4 && chmod +x install.sh && ./install.sh lnmp
+  	  wget -c --no-check-certificate https://raw.githubusercontent.com/itrydo/otoone/master/lnmp1.4.zip && unzip lnmp1.4.zip && rm -rf lnmp1.4.zip && cd lnmp1.4 && chmod +x install.sh && ./install.sh lnmp
 	fi
 	cd /home/wwwroot/
 	cp -r default/phpmyadmin/ .
@@ -21,7 +21,7 @@ install_ss_panel_mod_v3(){
 	chmod -R 777 *
 	chown -R www:www storage
 	chattr +i public/.user.ini
-	wget -N -P  /usr/local/nginx/conf/ --no-check-certificate https://raw.githubusercontent.com/mmmwhy/ss-panel-and-ss-py-mu/master/nginx.conf
+	wget -N -P  /usr/local/nginx/conf/ --no-check-certificate https://raw.githubusercontent.com/itrydo/otoone/master/nginx.conf
 	service nginx restart
 	IPAddress=`wget http://whatismyip.akamai.com/ -O - -q ; echo`;
 	sed -i "s#103.74.192.11#${IPAddress}#" /home/wwwroot/default/sql/sspanel.sql
@@ -51,7 +51,7 @@ Libtest(){
 	echo "$LIB_PING $LIB" >> ping.pl
 	libAddr=`sort -V ping.pl|sed -n '1p'|awk '{print $2}'`
 	if [ "$libAddr" == "$GIT" ];then
-		libAddr='https://raw.githubusercontent.com/mmmwhy/ss-panel-and-ss-py-mu/master/libsodium-1.0.13.tar.gz'
+		libAddr='https://raw.githubusercontent.com/itrydo/otoone/master/libsodium-1.0.13.tar.gz'
 	else
 		libAddr='https://download.libsodium.org/libsodium/releases/libsodium-1.0.13.tar.gz'
 	fi
